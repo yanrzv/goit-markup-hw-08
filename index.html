@@ -22,10 +22,15 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="body">
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__nav">
         <nav class="header__menu">
           <a class="header__logo logo" href="/"><span class="logo__part--blue">Web</span>Studio</a>
+          <button type="button" class="menu-button btn">
+            <svg class="menu-icon" width="40px" height="40px">
+              <use href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
           <ul class="nav-list list">
             <li class="nav-list__item"><a class="nav-list__link link current" href="/">Студія</a></li>
             <li class="nav-list__item"><a class="nav-list__link link" href="./portfolio.html">Портфоліо</a></li>
@@ -49,7 +54,35 @@
           </li>
         </ul>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <button type="button" class="menu-close btn">
+          <svg class="menu-close-icon" width="40px" height="40px">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu__list list">
+          <li class="mob-menu__item"><a class="mob-menu__link link mob-current" href="/">Студія</a></li>
+          <li class="mob-menu__item"><a class="mob-menu__link link" href="./portfolio.html">Портфоліо</a></li>
+          <li class="mob-menu__item"><a class="mob-menu__link link" href="#contacts">Контакти</a></li>
+        </ul>
+        <div class="mob-contact-wrap">
+          <ul class="contact-list list mob-contact-list">
+            <li class="mob-contact-item">
+              <a class="mob-contact-phone link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-contact-item">
+              <a class="mob-contact-mail link" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item"><a href="/" class="mob-soc-link link">Instagram</a></li>
+            <li class="mob-soc-item"><a href="/" class="mob-soc-link link">Twitter</a></li>
+            <li class="mob-soc-item"><a href="/" class="mob-soc-link link">Facebook</a></li>
+            <li class="mob-soc-item"><a href="/" class="mob-soc-link link">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     <main>
       <div class="overlay">
@@ -72,7 +105,9 @@
                 </svg>
               </div>
               <h3 class="benefits__title">УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p class="benefits__text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+              <p class="benefits__text">
+                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+              </p>
             </li>
             <li class="benefits__item">
               <div class="benefits__wrap">
@@ -124,7 +159,12 @@
             </li>
             <li class="work__item">
               <div class="work__overlay">
-                <img class="work__pic" src="./images/job/mobile-dev.jpg" alt="розробка мобільних додатків" width="370" />
+                <img
+                  class="work__pic"
+                  src="./images/job/mobile-dev.jpg"
+                  alt="розробка мобільних додатків"
+                  width="370"
+                />
                 <div class="work__desc">
                   <h3 class="work__title">Мобільні додатки</h3>
                 </div>
