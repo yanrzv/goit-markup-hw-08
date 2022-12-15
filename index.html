@@ -24,19 +24,20 @@
   <body class="body">
     <header class="header">
       <div class="container header__nav">
+        <a class="header__logo logo" href="/"><span class="logo__part--blue">Web</span>Studio</a>
+
         <nav class="header__menu">
-          <a class="header__logo logo" href="/"><span class="logo__part--blue">Web</span>Studio</a>
-          <button type="button" class="menu-button btn">
-            <svg class="menu-icon" width="40px" height="40px">
-              <use href="./images/sprite.svg#icon-menu"></use>
-            </svg>
-          </button>
           <ul class="nav-list list">
             <li class="nav-list__item"><a class="nav-list__link link current" href="/">Студія</a></li>
             <li class="nav-list__item"><a class="nav-list__link link" href="./portfolio.html">Портфоліо</a></li>
             <li class="nav-list__item"><a class="nav-list__link link" href="#contacts">Контакти</a></li>
           </ul>
         </nav>
+        <button type="button" class="menu-button btn" data-menu-open>
+          <svg class="menu-icon" width="40px" height="40px">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
         <ul class="contact-list list header__contact-list">
           <li class="contact-list__item">
             <a class="contact-list__link link" href="mailto:info@devstudio.com">
@@ -54,14 +55,14 @@
           </li>
         </ul>
       </div>
-      <div class="mob-menu">
-        <button type="button" class="menu-close btn">
+      <div class="mob-menu is-hidden" data-menu>
+        <button type="button" class="menu-close btn" data-menu-close>
           <svg class="menu-close-icon" width="40px" height="40px">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <ul class="mob-menu__list list">
-          <li class="mob-menu__item"><a class="mob-menu__link link mob-current" href="/">Студія</a></li>
+          <li class="mob-menu__item"><a class="mob-menu__link link current" href="/">Студія</a></li>
           <li class="mob-menu__item"><a class="mob-menu__link link" href="./portfolio.html">Портфоліо</a></li>
           <li class="mob-menu__item"><a class="mob-menu__link link" href="#contacts">Контакти</a></li>
         </ul>
@@ -446,69 +447,75 @@
       </section>
     </main>
 
-    <!-- <footer class="footer">
-      <div class="container footer-columns">
-        <div class="footer-address">
-          <a class="footer-logo logo" href="/"><span class="logo__part--blue">Web</span>Studio</a>
-          <address class="address">
-            <ul class="address-list list">
-              <li class="address-item">
-                <a class="address-link address-street link" href="https://google.com.ua">м. Київ, пр-т Лесі Українки, 26</a>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-tab-container">
+          <div class="footer-address">
+            <a class="footer-logo logo" href="/"><span class="logo__part--blue">Web</span>Studio</a>
+            <address class="address">
+              <ul class="address-list list">
+                <li class="address-item">
+                  <a class="address-link address-street link" href="https://google.com.ua"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address-item">
+                  <a class="address-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li class="address-item">
+                  <a class="address-link link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social">
+            <p class="footer-social-text footer-title">ПРИЄДНУЙТЕСЬ</p>
+            <ul class="footer-social-list list">
+              <li class="footer-social-item">
+                <a href="/" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-item">
-                <a class="address-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <li class="footer-social-item">
+                <a href="/" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-item"><a class="address-link link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+              <li class="footer-social-item">
+                <a href="/" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="/" class="footer-social-link link">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-social">
-          <p class="footer-social-text footer-title">ПРИЄДНУЙТЕСЬ</p>
-          <ul class="footer-social-list list">
-            <li class="footer-social-item">
-              <a href="/" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
+          </div>
+          <div class="footer-subscribe">
+            <p class="footer-subscribe-title footer-title">Підпишіться на розсилку</p>
+            <form class="footer-subscribe-form">
+              <input type="email" class="footer-input" placeholder="E-mail" name="footer-subscribe-email" />
+              <button class="footer-subscribe-btn btn" type="submit">
+                Підписатися
+                <svg class="footer-send-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-send"></use>
                 </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="/" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="/" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="/" class="footer-social-link link">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-subscribe">
-          <p class="footer-subscribe-title footer-title">Підпишіться на розсилку</p>
-          <form class="footer-subscribe-form">
-            <input type="email" class="footer-input" placeholder="E-mail" name="footer-subscribe-email" />
-            <button class="footer-subscribe-btn btn" type="submit">
-              Підписатися
-              <svg class="footer-send-icon" width="24" height="24">
-                <use href="./images/sprite.svg#icon-send"></use>
-              </svg>
-            </button>
-          </form>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- MODAL -->
 
@@ -573,7 +580,6 @@
 
             <label for="user-comment" class="input-label">Коментар</label>
             <textarea
-              rows="5"
               class="modal-comment"
               id="user-comment"
               name="comment"
@@ -598,5 +604,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mob-menu.js"></script>
   </body>
 </html>
