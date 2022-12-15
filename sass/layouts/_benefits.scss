@@ -44,6 +44,11 @@
     @include sectionText (14px, 1.14, 0.03em, var(--title-text-color));
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+
+    @include tablet {
+        text-align: left;
+    }
 }
 
 .benefits__text {

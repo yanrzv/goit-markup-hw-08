@@ -163,9 +163,7 @@
 }
 
 .checkbox-wrapper {
-    // position: relative;
     display: block;
-    // justify-content: center;
     height: 30px;
     margin-bottom: 30px;
 }
@@ -176,13 +174,11 @@
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.03em;
-    letter-spacing: 0.03em;
     color: var(--primary-text-color);
-    margin-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
 
-    @include tablet {
+    @include desktop {
         font-size: 14px;
         line-height: 1.71;
     }
@@ -194,6 +190,14 @@
     line-height: 1.71;
     color: var(--accent-color);
     text-decoration: none;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.03em;
+
+    @include desktop {
+            font-size: 14px;
+            line-height: 1.71;
+        }
 }
 
 .modal-text-link::after {
@@ -217,7 +221,6 @@
     border: none;
     width: 200px;
     height: 50px;
-    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 52px;
