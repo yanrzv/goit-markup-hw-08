@@ -188,6 +188,11 @@ ul {
     width: 450px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 530px;
+  }
+}
 
 .modal-close-button {
   position: absolute;

@@ -32,6 +32,10 @@
         width: 450px;
     }
 
+    @include desktop{
+        width: 530px;
+    }
+
 }
 
 .modal-close-button {
